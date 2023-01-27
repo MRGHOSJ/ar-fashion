@@ -960,6 +960,7 @@ const tracker = {
     setupCamera: async function(useCamera) {
         tracker.setStatus('Please wait...initializing camera...');
         const constraints = {
+            
             video: {
               width: {
                 min: 1280,

@@ -5,6 +5,12 @@ body {
   font-family: Arial, Verdana, sans-serif;
   height:  100%;
 }
+.photo{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+}
 a {
 	color: #03a9f4;
 }

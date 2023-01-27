@@ -106,6 +106,11 @@ const app = {
             app.toggleDebug();
         });
 
+        // btn: Take Snapshot
+        document.getElementById('btn_take_photo').addEventListener('click', function() {
+            app.snapshot();
+        });
+
         // btn: 3D VIEW ON/OFF
         document.getElementById('btn_toggle_3d').addEventListener('click', function() {
             app.toggle3D();
@@ -136,6 +141,15 @@ const app = {
             tracker.enableAI = true;
             console.log('AI OFF');
         }
+    },
+
+    snapshot: function() {
+        let canvas = document.querySelector('#canvas');
+        let img = canvas.toDataURL('image/png')
+        let anchor = document.createElement('a');
+        anchor.setAttribute('download', 'arFashion.png')
+        anchor.setAttribute('href', img)
+        anchor.click(); 
     },
 
     // handle toggle button
